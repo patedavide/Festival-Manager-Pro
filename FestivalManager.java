@@ -27,9 +27,19 @@ public class FestivalManager {
             System.out.println((i+1) + "." + scaletta.get(i));
         }
 
-        Set<String> bigliettiValidati = new HashSet<>();
+        Set<String> ticketCodex = new HashSet<>();
 
+        ticketCodex.add("TICK-001");
+        ticketCodex.add("TICK-042");
+        ticketCodex.add("TICK-777");
+        ticketCodex.add("TICK-095");
+        ticketCodex.add("TICK-007");
 
+        boolean duplicato = ticketCodex.add("TICK-001");
+        System.out.println("Biglietto duplicato: " + duplicato);
+        System.out.println("Numero Partecipanti: " + ticketCodex.size());
+
+        Map<String, String> registroPartecipanti = new HashMap<>();
 
     }
 }
