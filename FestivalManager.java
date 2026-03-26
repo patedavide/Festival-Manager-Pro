@@ -39,8 +39,37 @@ public class FestivalManager {
         System.out.println("Biglietto duplicato: " + duplicato);
         System.out.println("Numero Partecipanti: " + ticketCodex.size());
 
+        System.out.println("Biglietti disordinati: ");
+        for (String ticket: ticketCodex){
+            System.out.println(ticket);
+        }
+
+        Set<String> bigliettiOrdinati = new TreeSet<>(ticketCodex);
+        System.out.println("Biglietti Ordinati: " + bigliettiOrdinati);
+
         Map<String, String> registroPartecipanti = new HashMap<>();
 
+        registroPartecipanti.put("TICK-001", "Ilario SUardi");
+        registroPartecipanti.put("TICK-042", "Zakaria El Haiki");
+        registroPartecipanti.put("TICK-777", "Davide Paternò");
+        registroPartecipanti.put("TICK-095", "Giacomo Rota");
+        registroPartecipanti.put("TICK-007", "Federico Mazzoleni");
+
+        cercaPartecipante(registroPartecipanti, "TICK-042");
+        cercaPartecipante(registroPartecipanti, "TICK-006");
+
+        System.out.println("Elenco partecipanti: ");
+        for (Map.Entry<String, String > entry: registroPartecipanti.entrySet()){
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+
+    public static void cercaPartecipante(Map<String, String> mappa, String codice){
+        if(mappa.containsKey(codice)){
+            System.out.println("Benvenuto, " + mappa.get(codice));
+        } else {
+            System.out.println("Codide non valido: " + codice);
+        }
     }
 }
 
