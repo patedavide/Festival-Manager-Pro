@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FestivalApp {
+public class FestivalManager {
     public static void main(String[] args) {
         // Suggerimento: Inizia da qui
         List<String> scaletta = new ArrayList<>();
@@ -22,7 +22,7 @@ public class FestivalApp {
 
         //Scaletta con artista duplicato
         scaletta.add("Bad Bunny");
-        System.out.println("Scaletta festival:");
+        System.out.println("Scaletta festival con arista duplicato:");
         for (int i = 0; i < scaletta.size(); i++) {
             System.out.println((i+1) + "." + scaletta.get(i));
         }
